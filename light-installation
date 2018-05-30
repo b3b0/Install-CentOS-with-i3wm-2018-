@@ -1,0 +1,20 @@
+Basic Web Server > Backup Client
+                   Debugging Tools
+                   Directory Client
+                   Language Support
+                   Security Tools
+                   Any preferred languages
+				   
+US GOVT SECURITY PROFILE
+
+https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+curl -OL https://raw.githubusercontent.com/tamama/repository/master/sh/tamama/node-provisioning/tamama-centos/7.3/setup.sh
+sudo sh setup.sh
+wget -P /etc/yum.repos.d/ https://copr.fedoraproject.org/coprs/jkastner/dnf-plugins-core/repo/epel-7/jkastner-dnf-plugins-core-epel-7.repo && yum install dnf-plugins-core
+yum groupinstall "X Window System" "Desktop" "Desktop Platform"
+yum install lightdm xorg-x11-xinit-session
+yum install dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts i3 i3status lilyterm
+systemctl isolate graphical.target
+yum install nautlius 
+yum install firefox
+yum install nmap 
